@@ -9,6 +9,7 @@ body {
   border-radius: 20px;
   padding: 50px;
 }
+
 .instructions {
   padding: 16px;
   border: 1px solid rgba(39, 33, 66, 0.5);
@@ -37,6 +38,10 @@ body {
   border-left: 3px solid #21bf73;
   box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
 }
+.hidden {
+  display: none;
+}
+
 header {
   margin-bottom: 30px;
 }
@@ -49,13 +54,16 @@ h1 {
   color: #fd5e53;
 }
 
-form {
+.form-wrapper {
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 10px;
   padding: 30px;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-  border-radius: 10px;
+}
+
+form {
   display: flex;
-  margin-bottom: 30px;
-  background-color: white;
 }
 
 a {
@@ -66,4 +74,18 @@ footer {
   text-align: center;
   font-size: 13px;
   margin-top: 30px;
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
