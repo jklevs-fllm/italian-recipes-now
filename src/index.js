@@ -22,11 +22,7 @@ function generateRecipe(event) {
 
   let recipeElement = document.querySelector("#recipe");
   recipeElement.classList.remove("hidden");
-  recipeElement.innerHTML = `<div class = "blink">⏲ Finding a fabulous recipe for you using <strong>${instructionsInput.value}! </strong></div> `;
-
-  console.log("Generating Recipe");
-  console.log(`Prompt: ${prompt}`);
-  console.log(`Context: ${context}`);
+  recipeElement.innerHTML = `<div class = "blink">⏲ Finding a fabulous recipe for you using <strong>${instructionsInput.value}!</strong></div>`;
 
   axios.get(apiUrl).then(displayRecipe);
 }
